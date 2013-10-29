@@ -4,7 +4,7 @@
 SITENAME = u'chrooted.net'
 AUTHOR = u'Patrick Pelletier'
 SITESUBTITLE = 'Patrick Pelletier\'s personal webpage...'
-SITEURL = 'http://chrooted.net'
+SITEURL = ''
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'

@@ -17,7 +17,8 @@ THEME = 'themes/crowsfoot'
 
 MENUITEMS = [('blog', '/')]
 
-STATIC_PATHS =['misc', 'img']
+STATIC_PATHS =['misc', 'img', 'extra/CNAME']
+EXTRA_PATH_METADATA = { 'extra/CNAME': {'path': 'CNAME'}, }
 
 TIMEZONE = 'America/Montreal'
 

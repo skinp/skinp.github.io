@@ -35,7 +35,7 @@ clean:
 regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-serve:
+serve: html
 	cd $(OUTPUTDIR) && python -m SimpleHTTPServer
 
 publish:

@@ -1,0 +1,3 @@
+[submodule "themes/crowsfoot"]
+	path = themes/crowsfoot
+	url = https://github.com/skinp/crowsfoot

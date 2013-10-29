@@ -17,7 +17,7 @@ THEME = 'themes/crowsfoot'
 
 MENUITEMS = [('blog', '/')]
 
-STATIC_PATHS =['misc', 'img', 'extra/CNAME']
+STATIC_PATHS = ['extra/CNAME']
 EXTRA_PATH_METADATA = { 'extra/CNAME': {'path': 'CNAME'}, }
 
 TIMEZONE = 'America/Montreal'
@@ -26,16 +26,11 @@ DEFAULT_LANG = u'en'
 
 DEFAULT_PAGINATION = None
 
-FILES_TO_COPY = (('extra/CNAME', 'CNAME'),)
-
-# addresses
-
 #EMAIL_ADDRESS = 'pp.pelletier@gmail.com'
 GITHUB_ADDRESS = 'https://github.com/skinp'
 #SO_ADDRESS = 'https://stackoverflow.com/users/2907/skinp'
 TWITTER_ADDRESS = 'https://twitter.com/skinp'
 
-# feed
 FEED_RSS = 'feeds/rss.xml'
 FEED_MAX_ITEMS = 10
 

@@ -42,14 +42,45 @@
     </header>
 
     <!-- content -->
-<h1>Archives for chrooted.net</h1>
 
-<dl>
-    <dt>Tue 29 October 2013</dt>
-    <dd><a href="http://chrooted.net/2013/10/29/python-tab-completion.html">Python Tab&nbsp;Completion</a></dd>
-    <dt>Tue 29 October 2013</dt>
-    <dd><a href="http://chrooted.net/2013/10/29/starting-things-easily-my-screerc.html">Starting things easily&#8230; My&nbsp;.screenrc</a></dd>
-</dl>
+<section class="content">
+
+  <h3 class="posttitle">
+    <a class="nodec" href="/2013/10/29/python-tab-completion.html" rel="bookmark" title="Permalink to Python Tab Completion">
+      Python Tab&nbsp;Completion
+    </a>
+  </h3>
+
+  <div class="postinfo">
+    <p class="published" title="2013-10-29T00:00:00">
+      Tue 29 October 2013
+    </p>
+
+  </div><!-- .postinfo -->
+
+  <div class="article">
+    <p>Add this to your <code>PYTHONSTARTUP</code> (ex: <code>~/.pythonrc.py</code>)&nbsp;file:</p>
+<div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">readline</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Module readline not available.&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">rlcompleter</span>
+    <span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s">&quot;tab: complete&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>then</p>
+<div class="highlight"><pre><span class="nb">export </span><span class="nv"><span class="caps">PYTHONSTARTUP</span></span><span class="o">=</span>~/.pythonrc.py
+python
+</pre></div>
+
+
+<p>or add <code>PYTHONSTARTUP</code> entry to your shell&nbsp;profile&#8230;</p>
+  </div><!-- .content -->
+
+</section>
+
 
     <!-- footer -->
     <footer>

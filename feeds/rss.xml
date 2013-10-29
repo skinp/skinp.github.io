@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chrooted.net</title><link>/</link><description>Patrick Pelletier's personal webpage...</description><atom:link href="/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 29 Oct 2013 00:00:00 -0400</lastBuildDate><item><title>Starting things easily… My .screenrc</title><link>/2013/10/29/starting-things-easily-my-screerc.html</link><description>&lt;p&gt;A first blog post better be good right?
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chrooted.net</title><link>http://chrooted.net/</link><description>Patrick Pelletier's personal webpage...</description><atom:link href="http://chrooted.net/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 29 Oct 2013 00:00:00 -0400</lastBuildDate><item><title>Starting things easily… My .screenrc</title><link>http://chrooted.net/2013/10/29/starting-things-easily-my-screerc.html</link><description>&lt;p&gt;A first blog post better be good right?
 It better be original and try to get you some readers&amp;nbsp;uh?&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;NO&lt;/span&gt;! You just want to test out if sh*t works&amp;#8230;
 So here it is, I&amp;#8217;ll just dump the content of my&amp;nbsp;.screenrc:&lt;/p&gt;
@@ -16,4 +16,4 @@ So here it is, I&amp;#8217;ll just dump the content of my&amp;nbsp;.screenrc:&lt
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;On a positive note, it could be usefull to&amp;nbsp;someone&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Patrick Pelletier</dc:creator><pubDate>Tue, 29 Oct 2013 00:00:00 -0400</pubDate><guid>tag:,2013-10-29:2013/10/29/starting-things-easily-my-screerc.html</guid></item></channel></rss>
+&lt;p&gt;On a positive note, it could be usefull to&amp;nbsp;someone&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Patrick Pelletier</dc:creator><pubDate>Tue, 29 Oct 2013 00:00:00 -0400</pubDate><guid>tag:chrooted.net,2013-10-29:2013/10/29/starting-things-easily-my-screerc.html</guid></item></channel></rss>

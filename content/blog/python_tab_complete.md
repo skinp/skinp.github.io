@@ -5,7 +5,7 @@ Summary: How to add primitive tab completion to the python shell
 
 Add this to your `PYTHONSTARTUP` (ex: `~/.pythonrc.py`) file:
 
-    ::python
+    :::python
     try:
         import readline
     except ImportError:
@@ -16,7 +16,7 @@ Add this to your `PYTHONSTARTUP` (ex: `~/.pythonrc.py`) file:
 
 then
 
-    ::bash
+    :::bash
     export PYTHONSTARTUP=~/.pythonrc.py
     python
 

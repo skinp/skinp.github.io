@@ -6,8 +6,10 @@ AUTHOR = u'Patrick Pelletier'
 SITESUBTITLE = 'Patrick Pelletier\'s personal webpage...'
 SITEURL = ''
 
-ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
-ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+#ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+#ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+ARTICLE_URL = '{slug}.html'
+ARTICLE_SAVE_AS = '{slug}.html'
 
 PROFILE_IMAGE_URL = 'https://secure.gravatar.com/avatar/566e0ab0119d534d05abbcf61d316d28?s=300'
 

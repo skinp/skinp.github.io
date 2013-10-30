@@ -3,7 +3,7 @@
 
 SITENAME = u'chrooted.net'
 AUTHOR = u'Patrick Pelletier'
-SITESUBTITLE = 'Patrick Pelletier\'s personal webpage...'
+SITESUBTITLE = u'by Patrick Pelletier'
 SITEURL = ''
 
 #ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'

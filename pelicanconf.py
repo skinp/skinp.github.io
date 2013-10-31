@@ -8,8 +8,8 @@ SITEURL = ''
 
 #ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 #ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
-ARTICLE_URL = '{slug}.html'
-ARTICLE_SAVE_AS = '{slug}.html'
+ARTICLE_URL = 'blog/{slug}.html'
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
 PROFILE_IMAGE_URL = 'https://secure.gravatar.com/avatar/566e0ab0119d534d05abbcf61d316d28?s=300'
 
@@ -19,7 +19,7 @@ THEME = 'themes/crowsfoot'
 
 MENUITEMS = [('blog', '/')]
 
-STATIC_PATHS = ['extra/CNAME']
+STATIC_PATHS = ['extra/CNAME', 'static']
 EXTRA_PATH_METADATA = { 'extra/CNAME': {'path': 'CNAME'}, }
 
 TIMEZONE = 'America/Montreal'

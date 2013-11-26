@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>chrooted.net</title><link href="http://chrooted.net/" rel="alternate"></link><link href="http://chrooted.net/feeds/blog.atom.xml" rel="self"></link><id>http://chrooted.net/</id><updated>2013-10-29T00:00:00-04:00</updated><entry><title>Python Tab Completion</title><link href="http://chrooted.net/blog/python-tab-completion.html" rel="alternate"></link><updated>2013-10-29T00:00:00-04:00</updated><author><name>Patrick Pelletier</name></author><id>tag:chrooted.net,2013-10-29:blog/python-tab-completion.html</id><summary type="html">&lt;p&gt;Add this to your &lt;code&gt;PYTHONSTARTUP&lt;/code&gt; (ex: &lt;code&gt;~/.pythonrc.py&lt;/code&gt;)&amp;nbsp;file:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chrooted.net</title><link href="http://chrooted.net/" rel="alternate"></link><link href="http://chrooted.net/feeds/blog.atom.xml" rel="self"></link><id>http://chrooted.net/</id><updated>2013-11-26T00:00:00-05:00</updated><entry><title>Docker on Debian</title><link href="http://chrooted.net/blog/docker-on-debian.html" rel="alternate"></link><updated>2013-11-26T00:00:00-05:00</updated><author><name>Patrick Pelletier</name></author><id>tag:chrooted.net,2013-11-26:blog/docker-on-debian.html</id><summary type="html">&lt;p&gt;I wanted to reinstall my inactive &lt;span class="caps"&gt;KVM&lt;/span&gt; &lt;span class="caps"&gt;VPS&lt;/span&gt; for quite some time and I thought it would be great if I could get some support for lightweight &amp;#8220;virtual&amp;#8221; containers to ease my development workflow. At first, I had a couple&amp;nbsp;problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 12.04 (in fact, almost all recent 64 bits Ubuntu version) wasn&amp;#8217;t properly installing (The installer hanged during hardware&amp;nbsp;discovery)&lt;/li&gt;
+&lt;li&gt;Docker was mostly Ubuntu only (well for easy install at&amp;nbsp;least)&lt;/li&gt;
+&lt;li&gt;I had some trouble setting up simple lxc on Debian (There&amp;#8217;s some documented issues on&amp;nbsp;templates)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So I was happy today when I saw &lt;a href="http://blog.docker.io/2013/11/docker-0-7-docker-now-runs-on-any-linux-distribution/"&gt;the announcement of the new 0.7 version of Docker&lt;/a&gt; which adds Standard Linux&amp;nbsp;Support.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s how I easily got it&amp;nbsp;working:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# We&amp;#39;ll do this stuff as root...&lt;/span&gt;
+sudo -i
+
+&lt;span class="c"&gt;# Install dependencies&lt;/span&gt;
+apt-get install lxc bridge-utils
+
+&lt;span class="c"&gt;# Cgroup support&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;cgroup    /sys/fs/cgroup  cgroup  defaults    0   0&amp;#39;&lt;/span&gt; &amp;gt; /etc/fstab
+mount -a
+
+&lt;span class="c"&gt;# &lt;span class="caps"&gt;IP&lt;/span&gt; forwarding&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;net.ipv4.ip_forward = 1&amp;#39;&lt;/span&gt; &amp;gt; /etc/sysctl.conf
+sysctl -p /etc/sysctl.conf
+
+&lt;span class="c"&gt;# Download and install (in /usr/local/bin) docker&lt;/span&gt;
+wget http://get.docker.io/builds/Linux/x86_64/docker-latest.tgz
+tar -xf docker-latest.tgz -C /
+
+&lt;span class="c"&gt;# Start and test...&lt;/span&gt;
+docker -d &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;
+docker run -i -t ubuntu /bin/bash
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After some light testing, it works quite well for basic usage. I haven&amp;#8217;t tested any port forwarding and front facing services yet&amp;#8230; next&amp;nbsp;step.&lt;/p&gt;
+&lt;p&gt;Obviously, this has to be automated in some better way so I plan to write an &lt;a href="https://github.com/ansible/ansible"&gt;Ansible&lt;/a&gt; playbook for&amp;nbsp;it.&lt;/p&gt;</summary></entry><entry><title>Python Tab Completion</title><link href="http://chrooted.net/blog/python-tab-completion.html" rel="alternate"></link><updated>2013-10-29T00:00:00-04:00</updated><author><name>Patrick Pelletier</name></author><id>tag:chrooted.net,2013-10-29:blog/python-tab-completion.html</id><summary type="html">&lt;p&gt;Add this to your &lt;code&gt;PYTHONSTARTUP&lt;/code&gt; (ex: &lt;code&gt;~/.pythonrc.py&lt;/code&gt;)&amp;nbsp;file:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;readline&lt;/span&gt;
 &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;

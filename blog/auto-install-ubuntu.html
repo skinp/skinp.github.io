@@ -59,10 +59,10 @@
   </div><!-- .postinfo -->
 
   <div class="article">
-    <p>Still in the process of correctly provisionning and configuring my Homelab and <span class="caps">VPS</span> with Ansible, I ended up having to often reinstall servers just to make sure my playbooks were still working after a lot of edit+deploy iterations. I was really tired of having to log into the <span class="caps">VNC</span> console of my <span class="caps">VPS</span> providers and manually run through the whole <span class="caps">ISO</span>&nbsp;setup.</p>
-<p>So today I decided I would take a break from coding Ansible playbooks and try to automate the provisionning of these servers <span class="caps">ALA</span> Kickstart&#8230; The&nbsp;goal:</p>
+    <p>Still in the process of correctly provisioning and configuring my Homelab and <span class="caps">VPS</span> with <a href="http://www.ansibleworks.com/">Ansible</a>, I ended up having to often reinstall servers just to make sure my playbooks were still working after a lot of edit+deploy iterations. I was really tired of having to log into the <span class="caps">VNC</span> console of my <span class="caps">VPS</span> providers and manually run through the whole <span class="caps">ISO</span>&nbsp;setup.</p>
+<p>So today I decided I would take a break from coding Ansible playbooks and try to automate the provisioning of these servers <span class="caps">ALA</span> Kickstart&#8230; The&nbsp;goal:</p>
 <p><strong><span class="caps">NO</span> <span class="caps">QUESTIONS</span>&nbsp;<span class="caps">ASKED</span></strong></p>
-<p>So after a couple of iterations (again!!!), here is my preseed.cfg tested on Ubuntu 12.04 <span class="caps">LTS</span>&nbsp;x86_64:</p>
+<p>So after a couple of iterations (again!!!), here is my preseed.cfg tested on <a href="http://www.ubuntu.com/download/server">Ubuntu 12.04 <span class="caps">LTS</span> x86_64</a>:</p>
 <div class="highlight"><pre><span class="cp">## Options to set on the command line</span>
 <span class="n">d</span><span class="o">-</span><span class="n">i</span> <span class="n">debian</span><span class="o">-</span><span class="n">installer</span><span class="o">/</span><span class="n">locale</span> <span class="n">string</span> <span class="n">en_US</span>
 <span class="n">d</span><span class="o">-</span><span class="n">i</span> <span class="n">console</span><span class="o">-</span><span class="n">setup</span><span class="o">/</span><span class="n">ask_detect</span> <span class="n">boolean</span> <span class="nb">false</span>
@@ -131,6 +131,7 @@
 </pre></div>
 
 
+<p>To view the meaning of all these statements:&nbsp;https://help.ubuntu.com/10.04/installation-guide/i386/preseed-contents.html</p>
 <p>Unfortunatly, this process still isn&#8217;t fully automated. Since the network setup only happens after some questions are asked (notably language and keyboard layout), we have to give some additionnal parameters to the boot prompt (<strong>After the <span class="caps">CD</span> boots, select the language then F6</strong>). The boot line should look like the following (all on one line without&nbsp;&#8217;&#39;):</p>
 <div class="highlight"><pre><span class="n">url</span><span class="o">=</span><span class="n">http</span><span class="o">:</span><span class="c1">//webserver.domain/path/preseed.cfg \</span>
 <span class="c1">debian-installer/locale=en_US \</span>
@@ -143,7 +144,7 @@
 </pre></div>
 
 
-<p>In my opinion, it&#8217;s still a lot better thant having to go through the whole&nbsp;setup&#8230;</p>
+<p>In my opinion, it&#8217;s still a lot better than having to go through the whole setup. Especially now that I can add some additionnal configuration (installed packages, user groups&#8230;) at provision&nbsp;time!</p>
   </div><!-- .content -->
 
 </section>

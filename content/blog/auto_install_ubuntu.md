@@ -77,7 +77,7 @@ So after a couple of iterations (again!!!), here is my preseed.cfg tested on [Ub
     ## Avoid that last message about the install being complete.
     d-i finish-install/reboot_in_progress note
 
-To view the meaning of all these statements: https://help.ubuntu.com/10.04/installation-guide/i386/preseed-contents.html
+You can view the meaning of all these statements [here](https://help.ubuntu.com/lts/installation-guide/i386/preseed-contents.html)
 
 Unfortunatly, this process still isn't fully automated. Since the network setup only happens after some questions are asked (notably language and keyboard layout), we have to give some additionnal parameters to the boot prompt (__After the CD boots, select the language then F6__). The boot line should look like the following (all on one line without '\\'):
 

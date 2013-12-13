@@ -71,7 +71,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;To view the meaning of all these statements:&amp;nbsp;https://help.ubuntu.com/10.04/installation-guide/i386/preseed-contents.html&lt;/p&gt;
+&lt;p&gt;You can view the meaning of all these statements &lt;a href="https://help.ubuntu.com/lts/installation-guide/i386/preseed-contents.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Unfortunatly, this process still isn&amp;#8217;t fully automated. Since the network setup only happens after some questions are asked (notably language and keyboard layout), we have to give some additionnal parameters to the boot prompt (&lt;strong&gt;After the &lt;span class="caps"&gt;CD&lt;/span&gt; boots, select the language then F6&lt;/strong&gt;). The boot line should look like the following (all on one line without&amp;nbsp;&amp;#8217;&amp;#39;):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//webserver.domain/path/preseed.cfg \&lt;/span&gt;
 &lt;span class="c1"&gt;debian-installer/locale=en_US \&lt;/span&gt;

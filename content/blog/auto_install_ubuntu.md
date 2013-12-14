@@ -79,7 +79,7 @@ So after a couple of iterations (again!!!), here is my preseed.cfg tested on [Ub
 
 You can view the meaning of all these statements [here](https://help.ubuntu.com/lts/installation-guide/i386/preseed-contents.html).
 
-Unfortunatly, this process still isn't fully automated. Since the network setup only happens after some questions are asked (notably language and keyboard layout), we have to give some additionnal parameters to the boot prompt (__After the CD boots, select the language then F6__). The boot line should look like the following (all on one line without '\\'):
+Unfortunatly, this process still isn't fully automated. Since the network setup only happens after some questions are asked (notably language and keyboard layout), we have to give some additionnal parameters to the boot prompt (__After the CD boots, select the language then F6__). The boot line should look like the following (all on one line):
 
     url=http://webserver.domain/path/preseed.cfg \
     debian-installer/locale=en_US \

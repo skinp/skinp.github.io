@@ -86,6 +86,7 @@ Unfortunatly, this process still isn't fully automated. Since the network setup 
     console-setup/ask_detect=false \
     console-setup/layoutcode=us \
     keyboard-configuration/layoutcode=us \
+    netcfg/choose_interface=auto \
     hostname=YOURHOSTNAME \
     domain=YOURDOMAINE \
     initrd=/install/initrd.gz quiet --

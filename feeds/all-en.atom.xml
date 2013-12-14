@@ -78,6 +78,7 @@
 &lt;span class="c1"&gt;console-setup/ask_detect=false \&lt;/span&gt;
 &lt;span class="c1"&gt;console-setup/layoutcode=us \&lt;/span&gt;
 &lt;span class="c1"&gt;keyboard-configuration/layoutcode=us \&lt;/span&gt;
+&lt;span class="c1"&gt;netcfg/choose_interface=auto \&lt;/span&gt;
 &lt;span class="c1"&gt;hostname=&lt;span class="caps"&gt;YOURHOSTNAME&lt;/span&gt; \&lt;/span&gt;
 &lt;span class="c1"&gt;domain=&lt;span class="caps"&gt;YOURDOMAINE&lt;/span&gt; \&lt;/span&gt;
 &lt;span class="c1"&gt;initrd=/install/initrd.gz quiet --&lt;/span&gt;

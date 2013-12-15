@@ -146,6 +146,18 @@
 
 
 <p>In my opinion, it&#8217;s still a lot better than having to go through the whole setup. Especially now that I can add some additionnal configuration (installed packages, user groups&#8230;) at provision&nbsp;time!</p>
+<p><strong><span class="caps">UPDATE</span>&nbsp;2013-12-15:</strong></p>
+<p>I had some problems with the previous boot&nbsp;line:</p>
+<ul>
+<li>So many caracters to&nbsp;type!</li>
+<li>It was actually failing when reinstalling since lvm was already detecting the previous&nbsp;install&#8230;</li>
+</ul>
+<p>I solved this with some boot line aliases and other&nbsp;parameters:</p>
+<div class="highlight"><pre><span class="n">url</span><span class="o">=</span><span class="n">http</span><span class="o">:</span><span class="c1">//webserver.domain/path/preseed.cfg \</span>
+<span class="c1">auto=true priority=critical \</span>
+<span class="c1">hostname=<span class="caps">HOSTNAME</span> domain=<span class="caps">DOMAIN</span> \</span>
+<span class="c1">interface=auto</span>
+</pre></div>
   </div><!-- .content -->
 
 </section>

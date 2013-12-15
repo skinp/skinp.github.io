@@ -92,3 +92,17 @@ Unfortunatly, this process still isn't fully automated. Since the network setup 
     initrd=/install/initrd.gz quiet --
 
 In my opinion, it's still a lot better than having to go through the whole setup. Especially now that I can add some additionnal configuration (installed packages, user groups...) at provision time!
+
+__UPDATE 2013-12-15:__
+
+I had some problems with the previous boot line:
+
+* So many caracters to type!
+* It was actually failing when reinstalling since lvm was already detecting the previous install...
+
+I solved this with some boot line aliases and other parameters:
+
+    url=http://webserver.domain/path/preseed.cfg \
+    auto=true priority=critical \
+    hostname=HOSTNAME domain=DOMAIN \
+    interface=auto

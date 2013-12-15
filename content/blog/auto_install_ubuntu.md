@@ -105,4 +105,5 @@ I solved this with some boot line aliases and other parameters:
     url=http://webserver.domain/path/preseed.cfg \
     auto=true priority=critical \
     hostname=HOSTNAME domain=DOMAIN \
-    interface=auto
+    interface=auto \
+    initrd=/install/initrd.gz quiet --

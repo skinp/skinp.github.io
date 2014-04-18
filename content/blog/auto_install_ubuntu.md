@@ -44,13 +44,17 @@ So after a couple of iterations (again!!!), here is my preseed.cfg tested on [Ub
     d-i partman-auto/choose_recipe select atomic
     d-i partman/default_filesystem string ext4
 
-    d-i partman-auto-lvm/guided_size string max
     d-i partman-lvm/device_remove_lvm boolean true
+    d-i partman-md/device_remove_lvm boolean true
+    d-i partman-auto-lvm/guided_size string max
     d-i partman-lvm/confirm boolean true
 
     d-i partman/choose_partition select finish
     d-i partman/confirm_write_new_label boolean true
     d-i partman/confirm boolean true
+    d-i partman/confirm_nooverwrite boolean true
+    d-i partman-lvm/confirm_nooverwrite boolean true
+    d-i partman-md/confirm_nooverwrite boolean true
 
     ## User accounts
     d-i passwd/root-login boolean false
@@ -107,3 +111,13 @@ I solved this with some boot line aliases and other parameters:
     hostname=HOSTNAME domain=DOMAIN \
     interface=auto \
     initrd=/install/initrd.gz quiet --
+
+__UPDATE 2014-04-18:__
+
+While testing an automated installation of Ubuntu 14.04, I ran into some problems I didn't encounter the first time. I was getting 2 more confirmation dialogs during the partitioning steps. I had to add the following properties to my preseed.cfg:
+
+    d-i partman/confirm_nooverwrite boolean true
+    d-i partman-lvm/confirm_nooverwrite boolean true
+    d-i partman-md/confirm_nooverwrite boolean true
+
+I updated the file content in the original post.
